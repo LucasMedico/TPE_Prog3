@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import TPE.Vertice;
+
 
 public class GrafoDirigido<T> implements Grafo<T> {
 	
@@ -69,5 +71,9 @@ public class GrafoDirigido<T> implements Grafo<T> {
 	            }
 	        }
 	        return null;
+	    }
+	    
+	    public List<Vertice<T>> getVertices(){
+	    	return this.vertices;
 	    }
 }

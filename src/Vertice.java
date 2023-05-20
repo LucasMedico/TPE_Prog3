@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import TPE.Arco;
+
 public class Vertice<T> {
 	
 	private int id;
@@ -25,5 +27,13 @@ public class Vertice<T> {
 
     public void eliminarArco(int destino) {
         arcos.removeIf(arco -> arco.getDestino() == destino);
+    }
+    
+    public List<Integer> getAdyacentes(){
+    	List<Integer> adyacentes = new ArrayList<Integer>();
+    	for (Arco<T> a : arcos) {
+    		adyacentes.add(a.getDestino());
+    	}
+    	return adyacentes;
     }
 }
