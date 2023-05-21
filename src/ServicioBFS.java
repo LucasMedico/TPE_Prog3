@@ -13,6 +13,9 @@ public class ServicioBFS {
 		this.grafo = grafo;
 	}
 	
+    /*
+    Complejidad: O(v + a) donde "V" es el numero de vertices en el grafo y "A" es el numero total de arcos en el grafo.
+    */
 	public List<Integer> bfs() {
 		//Para marcar cada nodo ya visitado
 		List<Integer> visitados = new ArrayList<>();
@@ -29,6 +32,14 @@ public class ServicioBFS {
 		return visitados;
 	}
 	
+    /*
+    Complejidad: O(v) donde "V" es el numero de vertices en el grafo.
+    Recibe una lista de vertices y una cola de visitados, y realiza el recorrido BFS
+    a partir de los vertices proporcionados. Para cada vertice en la lista,
+    si su identificador no esta en la cola de visitados, se agrega a la cola.
+    Luego, se agregan los identificadores de los vertices adyacentes no visitados a la cola.
+    El metodo devuelve la cola de visitados actualizada.
+    */
 	private Queue<Integer> bfsVisitar(List<Vertice<String>> vertices, Queue<Integer> visitados){
 		
 		for (Vertice<String> v : vertices) {

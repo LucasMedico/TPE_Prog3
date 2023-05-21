@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +9,11 @@ public class ServicioDFS {
 		this.grafo = grafo;
 	}
 	
+    /*
+    Complejidad: O(v + a) donde "V" es el numero de vertices en el grafo y "A" es el numero total de arcos en el grafo.
+	Recorre todos los vertices en el grafo y para cada vertice si no ha sido agregado aun a la lista de visitados, invoca al metodo dfsVisitar() para agregarlo a la lista junto con sus adyacentes. 
+	El metodo devuelve la lista de vertices visitados.     
+    */	
 	public List<Integer> dfsForest() {
 		//Para marcar cada nodo ya visitado
 		List<Integer> visitados = new ArrayList<>();
@@ -27,6 +30,13 @@ public class ServicioDFS {
 		return visitados;
 	}
 	
+    /*
+    Complejidad: O(v + a) donde "V" es el numero de vertices en el grafo y "A" es el numero total de arcos en el grafo.
+    recibe un vertice y una lista de visitados, y realiza el recorrido DFS a partir del vertice proporcionado. 
+    Si el identificador del vertice no esta en la lista de visitados, se agrega a la lista. Luego, para cada identificador de vertice adyacente no visitado,
+    se obtiene el vertice correspondiente utilizando el metodo obtenerVertice() del grafo y se invoca recursivamente al metodo dfsVisitar() desde el vertice adyacente.
+    El metodo devuelve la lista de visitados actualizada.
+    */	
 	private List<Integer> dfsVisitar(Vertice<String> v, List<Integer> visitados){
 		//agrega al vertice actual en caso de no estar en lista de visitados
 		if(!visitados.contains(v.getId())) {

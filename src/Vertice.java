@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import TPE.Arco;
-
 public class Vertice<T> {
 	
 	private int id;
