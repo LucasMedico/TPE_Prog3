@@ -1,4 +1,5 @@
 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -10,6 +11,7 @@ public class Main {
         grafo.agregarVertice(4);
         grafo.agregarVertice(5);
         grafo.agregarVertice(6);
+        grafo.agregarVertice(7);
         grafo.agregarArco(0, 1, "Arco 0-1");
         grafo.agregarArco(0, 2, "Arco 0-2");
         grafo.agregarArco(1, 2, "Arco 1-2");
@@ -17,10 +19,13 @@ public class Main {
         grafo.agregarArco(0, 4, "Arco 0-4");
         grafo.agregarArco(1, 5, "Arco 1-5");
         grafo.agregarArco(5, 6, "Arco 5-6");
+        grafo.agregarArco(4, 7, "Arco 4-7");
+        grafo.agregarArco(3, 7, "Arco 3-7");
+        grafo.agregarArco(6, 7, "Arco 6-7");
         grafo.imprimirGrafo();
 
         /*grafo.borrarVertice(1);
-        System.out.println("Grafo después de borrar el vértice 1:");
+        System.out.println("Grafo despu�s de borrar el v�rtice 1:");
         */
         grafo.imprimirGrafo();
 
@@ -32,6 +37,9 @@ public class Main {
 	
         ServicioCamino dir = new ServicioCamino(grafo,0,2,2);
         System.out.println("Camino del 0 al 2 con limite de 2 en el grafo: " + dir.caminos());
+        
+        dir = new ServicioCamino(grafo,0,7,10);
+        System.out.println("Camino del 0 al 7 con limite de 10 en el grafo: " + dir.caminos());
         
 	}
 
