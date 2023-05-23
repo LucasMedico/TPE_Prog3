@@ -24,7 +24,7 @@ public class ServicioCamino {
     }
 
     private void backtracking(int vertice, List<Integer> caminoActual, int arcosRecorridos) {
-    	//si el vertice es el final y no supero los limites establecidos retorna el camino por copia
+    	//si el vertice es el final y no supero los limites establecidos agrega a la lista de caminos el camino actual
         if (vertice == destino && arcosRecorridos <= limite) {
             caminos.add(new ArrayList<>(caminoActual));
             return;
