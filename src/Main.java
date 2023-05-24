@@ -25,7 +25,7 @@ public class Main {
         grafo.imprimirGrafo();
 
         /*grafo.borrarVertice(1);
-        System.out.println("Grafo despu�s de borrar el v�rtice 1:");
+        System.out.println("Grafo despues de borrar el vertice 1:");
         */
         grafo.imprimirGrafo();
 

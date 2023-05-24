@@ -18,9 +18,9 @@ public class ServicioCamino {
     }
 
     /*
-    Complejidad O(V * A) donde V es el n�mero de v�rtices y A el de arcos.
-    Al no hacer mucho m�s que invocar al m�todo backtracking, su complejidad es la misma que el
-    m�todo invocado.
+    Complejidad O(V * A) donde V es el numero de vertices y A el de arcos.
+    Al no hacer mucho mas que invocar al m�todo backtracking, su complejidad es la misma que el
+    metodo invocado.
     */
     public List<List<Integer>> caminos() {
         List<Integer> caminoActual = new ArrayList<>();
@@ -30,9 +30,9 @@ public class ServicioCamino {
     }
 
     /*
-     Complejidad O(V * A) donde V es el n�mero de v�rtices y A el de arcos.
-     En el caso del for de adyacentes, si pasa que todos son diferentes y no est�n presentes 
-     en el camino actual, se estar�a ejecutando las V veces.
+     Complejidad O(V * A) donde V es el n�mero de vertices y A el de arcos.
+     En el caso del for de adyacentes, si pasa que todos son diferentes y no estan presentes 
+     en el camino actual, se estara ejecutando las V veces.
      */
     private void backtracking(int vertice, List<Integer> caminoActual, int arcosRecorridos) {
     	//si el vertice es el final y no supero los limites establecidos agrega a la lista de caminos el camino actual
